@@ -1,7 +1,6 @@
 import logging
 import sys
 
-
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stderr)])
 
 import argparse
@@ -14,11 +13,13 @@ from typing import Any, Dict, Optional
 from mcp.server.fastmcp import FastMCP
 
 from app.logger import logger
+from app.tool.background_capture import BackgroundCaptureTool
 from app.tool.base import BaseTool
 from app.tool.bash import Bash
 from app.tool.browser_use_tool import BrowserUseTool
 from app.tool.str_replace_editor import StrReplaceEditor
 from app.tool.terminate import Terminate
+from app.tool.windows_exe import WindowsExeTool
 
 
 class MCPServer:
@@ -33,6 +34,8 @@ class MCPServer:
         self.tools["browser"] = BrowserUseTool()
         self.tools["editor"] = StrReplaceEditor()
         self.tools["terminate"] = Terminate()
+        self.tools["windows_exe"] = WindowsExeTool()
+        self.tools["background_capture"] = BackgroundCaptureTool()
 
     def register_tool(self, tool: BaseTool, method_name: Optional[str] = None) -> None:
         """Register a tool with parameter validation and documentation."""
