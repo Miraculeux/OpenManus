@@ -20,6 +20,7 @@ from app.tool.browser_use_tool import BrowserUseTool
 from app.tool.str_replace_editor import StrReplaceEditor
 from app.tool.terminate import Terminate
 from app.tool.windows_exe import WindowsExeTool
+from app.tool.windows_finder import WindowsFinderTool
 
 
 class MCPServer:
@@ -35,6 +36,7 @@ class MCPServer:
         self.tools["editor"] = StrReplaceEditor()
         self.tools["terminate"] = Terminate()
         self.tools["windows_exe"] = WindowsExeTool()
+        self.tools["windows_finder"] = WindowsFinderTool()
         self.tools["background_capture"] = BackgroundCaptureTool()
 
     def register_tool(self, tool: BaseTool, method_name: Optional[str] = None) -> None:

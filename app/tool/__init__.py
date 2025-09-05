@@ -10,6 +10,7 @@ from app.tool.terminate import Terminate
 from app.tool.tool_collection import ToolCollection
 from app.tool.web_search import WebSearch
 from app.tool.windows_exe import WindowsExeTool
+from app.tool.windows_finder import WindowsFinderTool
 
 __all__ = [
     "BaseTool",
@@ -23,5 +24,6 @@ __all__ = [
     "PlanningTool",
     "Crawl4aiTool",
     "WindowsExeTool",
+    "WindowsFinderTool",
     "BackgroundCaptureTool",
 ]

@@ -15,6 +15,7 @@ from app.tool.mcp import MCPClients, MCPClientTool
 from app.tool.python_execute import PythonExecute
 from app.tool.str_replace_editor import StrReplaceEditor
 from app.tool.windows_exe import WindowsExeTool
+from app.tool.windows_finder import WindowsFinderTool
 
 
 class Manus(ToolCallAgent):
@@ -41,6 +42,7 @@ class Manus(ToolCallAgent):
             BrowserUseTool(),
             StrReplaceEditor(),
             WindowsExeTool(),
+            WindowsFinderTool(),
             BackgroundCaptureTool(),
             AskHuman(),
             Terminate(),
